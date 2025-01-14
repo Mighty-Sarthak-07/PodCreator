@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     const fetch = async ()=>{
     try{
-      const res = await axios.get("http://localhost:1000/api/v1/check-cookie",{withCredentials:true});
+      const res = await axios.get("https://podcreator-backend.onrender.com/api/v1/check-cookie",{withCredentials:true});
       console.log(res.data.message);
     if(res.data.message == true){
       dispatch(authActions.login());

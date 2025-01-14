@@ -23,7 +23,7 @@ const Signup = () => {
   const handleSubmit = async () => {
     console.log(Values);
     try {
-      const res = await axios.post("http://localhost:1000/api/v1/sign-up", Values);
+      const res = await axios.post("https://podcreator-backend.onrender.com/api/v1/sign-up", Values);
       navigate("/login");
       toast.success(res.data.message);
     } catch (error) {

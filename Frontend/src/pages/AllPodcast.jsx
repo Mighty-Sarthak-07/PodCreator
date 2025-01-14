@@ -8,7 +8,7 @@ const AllPodcast = () => {
   useEffect(() => {
     const fetchPodcasts = async () => {
       try {
-        const res = await axios.post("http://localhost:1000/api/v1/get-podcasts");
+        const res = await axios.post("https://podcreator-backend.onrender.com/api/v1/get-podcasts");
         setPodcasts(res.data.data);
       } catch (error) {
         console.error("Error fetching podcasts:", error);

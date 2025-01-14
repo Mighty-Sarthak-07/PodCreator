@@ -10,7 +10,7 @@ const DescriptionPage = () => {
       const fetchPodcasts = async () => {
         try {
           const res = await axios.post(
-            `http://localhost:1000/api/v1/get-podcast/${id}`,{},
+            `https://podcreator-backend.onrender.com/api/v1/get-podcast/${id}`,{},
             { withCredentials: true }
           );
           setPodcasts(res.data.data);
@@ -24,7 +24,7 @@ const DescriptionPage = () => {
     <div className='px-4 lg:px-12 py-4 h-auto flex flex-col md:flex-row items-start justify-between gap-4' >
       {Podcasts && <>
       <div className="w-2/6 flex items-center justify-center md:justify-start md:items-start">
-      <img src={`http://localhost:1000/${Podcasts.frontImage}`} alt="img" className='rounded shadow-xl size-[50vh] object-cover' />
+      <img src={`https://podcreator-backend.onrender.com/${Podcasts.frontImage}`} alt="img" className='rounded shadow-xl size-[50vh] object-cover' />
       </div>
       <div className="w-4/6">
       <div className="text-4xl font-semibold">{Podcasts.title}</div>

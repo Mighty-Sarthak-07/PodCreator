@@ -20,7 +20,7 @@ const InputPodcast = () => {
 
   const fetchCategories = async () => {
     try {
-      const res = await axios.get("http://localhost:1000/api/v1/get-categories");
+      const res = await axios.get("https://podcreator-backend.onrender.com/api/v1/get-categories");
       setCategories(res.data.data || []);
     } catch (error) {
       console.error("Failed to fetch categories", error);
@@ -91,7 +91,7 @@ const InputPodcast = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:1000/api/v1/add-podcast",
+        "https://podcreator-backend.onrender.com/api/v1/add-podcast",
         data,
         { headers: { "Content-Type": "multipart/form-data" }, withCredentials: true }
       );
